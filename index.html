@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+        }
+        h1 {
+            color: #0056b3;
+            margin: 0;
+        }
+        .login-btn {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .login-btn:hover {
+            background-color: #003d80;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="header">
+        <h1>Student Management System</h1>
+        <button class="login-btn">Login</button>
+    </div>
+
+    <h2>Student Records</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Student No.</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Year Level</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2026-001</td>
+                <td>Juan Dela Cruz</td>
+                <td>BSIT</td>
+                <td>2nd Year</td>
+                <td>juan@example.com</td>
+            </tr>
+            <tr>
+                <td>2026-002</td>
+                <td>Felicity Cariño</td>
+                <td>BSIT-NET AD</td>
+                <td>2nd Year</td>
+                <td>felicity@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
