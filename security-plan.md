@@ -1,17 +1,16 @@
 # Secure Cloud Architecture Plan
 
 ## CDN
-The CDN stores cached copies of static content (like your HTML and CSS files) closer to users' geographic locations. This reduces latency, improves the overall loading speed of the web application, and decreases the direct traffic hitting your main infrastructure.
+By holding localized, cached copies of static assets (such as HTML documents and CSS stylesheets), the Content Delivery Network minimizes network latency and accelerates page load times while offloading routine traffic from primary infrastructure servers.
 
 ## Load Balancer
-The load balancer distributes incoming internet requests evenly across multiple application servers. This ensures high availability, prevents any single server from crashing under heavy traffic, and acts as the secure entry point for the application.
+Serving as the single entry point for external web requests, the load balancer disperses incoming client traffic across the application fleet. This prevents individual node exhaustion and maintains service availability during peak loads.
 
 ## Application Servers
-Application servers handle the core logic of the Student Management System and process dynamic requests from users. To maintain security, these servers should be placed in a private subnet, meaning they only accept traffic routed internally through the load balancer.
+These instances process business logic and execute dynamic user transactions. Placing application servers inside a private subnet guarantees that they process only internal requests forwarded by the load balancer, isolating them from outside threats.
 
 ## Database
-The database securely stores sensitive student records. To protect against unauthorized external access and potential data breaches, the database must remain strictly private and should never be directly accessible from the public Internet.
-
+The database functions as the centralized repository for confidential student information. Isolating it within a private subnet without public internet access protects sensitive datasets against unauthorized access and external threat vectors.
 
 # Public and Private Resources
 
